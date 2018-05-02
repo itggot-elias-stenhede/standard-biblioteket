@@ -3,19 +3,17 @@ def split_char(string, char)
     i = 0
     temp = ""
     while i < string.length
-        if string[i] != char
-            p i
-            temp << string[i]
-        else
-            p output
+        if string[i] == char
+            i += 1
             output << temp
             temp = ""
+        else
+            temp << string[i]
+            i += 1
         end
-        i += 1
     end
+    output << temp
     return output
 end
-
-p split_char("1;2;3;4;5", ";")
 
 
